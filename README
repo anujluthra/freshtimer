@@ -1,0 +1,5 @@
+Allows for easy syncing of time entries from [SlimTimer](http://www.slimtimer.com) to your [Freshbooks](www.freshbooks.com) account for easy invoicing.
+
+define your configurations in config.yml
+
+invoke sync.rb to do the magic!

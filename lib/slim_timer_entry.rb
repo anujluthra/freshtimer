@@ -10,6 +10,11 @@ class SlimTimerEntry
   property :task_name,            String,   :required => true
   property :synced,               Boolean,  :default  => false
 
+
+  def self.unsynced
+    all(:synced => false)
+  end
+
   
 
   def self.sync_with_remote

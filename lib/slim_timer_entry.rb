@@ -8,6 +8,7 @@ class SlimTimerEntry
   property :start_time,           DateTime, :required => true
   property :end_time,             DateTime, :required => true
   property :task_name,            String,   :required => true
+  property :synced,               Boolean,  :default  => false
 
   
 

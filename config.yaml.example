@@ -1,0 +1,8 @@
+slimtimer:
+  email: email@domain.com
+  password: password
+  api_key: somethinglong
+
+freshbooks:
+  account: sample.freshbooks.com
+  api_toke: somethinglonger

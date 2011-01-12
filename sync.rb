@@ -13,7 +13,7 @@ DataMapper.setup(:default, 'sqlite://' + Dir.pwd + '/' + 'freshtimer.db')
 load 'lib/slim_timer_entry.rb'
 
 # create the db schema with properties in models
-#DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 DataMapper.finalize
 

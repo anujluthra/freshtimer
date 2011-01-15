@@ -16,7 +16,22 @@ class SlimTimerEntry
     all(:synced => false)
   end
 
-  
+  def self.synced
+    all(:synced => true)
+  end
+
+  def synced!
+    update(:synced => true)
+  end
+
+
+  def freshtimer_attributes
+    {
+      :comments => "#{task_name} - #{comments}",
+      :start_time => start_time,
+      :duration => decimal_duration(duration_in_seconds)
+    }
+  end
 
   def self.sync_with_remote
     synced = 0

@@ -9,6 +9,7 @@ class SlimTimerEntry
   property :end_time,             DateTime, :required => true
   property :task_name,            String,   :required => true
   property :synced,               Boolean,  :default  => false
+  property :tags,                 String
 
 
   def self.unsynced
@@ -27,7 +28,8 @@ class SlimTimerEntry
           :comments =>            record['comments'],
           :start_time =>          record['start_time'],
           :end_time =>            record['end_time'],
-          :task_name =>           record['task']['name']
+          :task_name =>           record['task']['name'],
+          :tags =>                record['tags']
         )
         synced += 1
       rescue DataObjects::IntegrityError => e

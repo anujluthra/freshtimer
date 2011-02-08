@@ -1,5 +1,7 @@
-require 'rubygems'
-require 'activesupport'
+require "rubygems"
+require "bundler/setup"
+
+require 'active_support'
 require 'dm-core'
 require 'dm-migrations'
 require 'yaml'

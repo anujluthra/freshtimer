@@ -35,7 +35,7 @@ class SlimTimerEntry
 
   def self.sync_with_remote
     synced = 0
-    SLIM_TIMER.list_timeentries.each{|record|
+    SLIM_TIMER.list_timeentries(Date.today - 30).each{|record|
       begin
         create(
           :sync_id =>             record['id'],
